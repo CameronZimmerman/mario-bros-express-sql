@@ -104,6 +104,39 @@ describe('app routes', () => {
       expect(data.body).toEqual(expectation);
     });
 
+    test('returns characters by category', async() => {
+
+      const expectation = [
+        {
+          id:1,
+          owner_id:1,
+          name: 'mario',
+          good_guy: true,
+          image_url: 'https://www.mariowiki.com/images/c/cf/SMB_Super_Mario_Sprite.png',
+          age: 45,
+          category: 'hero',
+          quote: 'It\'s a-me, Mario!'
+        },
+        {
+          id: 2,
+          owner_id: 1,
+          name: 'luigi',
+          good_guy: true,
+          image_url: 'https://www.mariowiki.com/images/b/b7/SMB_Super_Luigi_Sprite.png',
+          age: 43,
+          category: 'hero',
+          quote: 'Luigi time!'
+        },
+      ];
+
+      const data = await fakeRequest(app)
+        .get('/characters/hero')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      expect(data.body).toEqual(expectation);
+    });
+
     test('returns specific character by name', async() => {
 
       const expectation = 
