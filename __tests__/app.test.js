@@ -35,6 +35,8 @@ describe('app routes', () => {
 
       const expectation = [
         {
+          id: 1,
+          owner_id: 1,
           name: 'mario',
           good_guy: true,
           image_url: 'https://www.mariowiki.com/images/c/cf/SMB_Super_Mario_Sprite.png',
@@ -43,6 +45,8 @@ describe('app routes', () => {
           quote: 'It\'s a-me, Mario!'
         },
         {
+          id: 2,
+          owner_id: 1,
           name: 'luigi',
           good_guy: true,
           image_url: 'https://www.mariowiki.com/images/b/b7/SMB_Super_Luigi_Sprite.png',
@@ -51,6 +55,8 @@ describe('app routes', () => {
           quote: 'Luigi time!'
         },
         {
+          id: 3,
+          owner_id: 1,
           name: 'princess toadstool',
           good_guy: true,
           image_url: 'https://www.mariowiki.com/images/c/c0/SMB_Princess_Toadstool_Sprite.png',
@@ -59,6 +65,8 @@ describe('app routes', () => {
           quote: 'Oh, no... oh.'
         },
         {
+          id: 4,
+          owner_id: 1,
           name: 'goomba',
           good_guy: false,
           image_url: 'https://www.mariowiki.com/images/4/4e/SMB_Goomba_Sprite.gif',
@@ -67,6 +75,8 @@ describe('app routes', () => {
           quote: 'N/A'
         },
         {
+          id: 5,
+          owner_id: 1,
           name: 'bullet bill',
           good_guy: false,
           image_url: 'https://www.mariowiki.com/images/e/ec/Bullet_Bill_Super_Mario_Bros.png',
@@ -75,6 +85,8 @@ describe('app routes', () => {
           quote: 'N/A'
         },
         {
+          id: 6,
+          owner_id: 1,
           name: 'bowser',
           good_guy: false,
           image_url: 'https://www.mariowiki.com/images/3/31/SMB_Bowser_Walking_Sprite.gif',
