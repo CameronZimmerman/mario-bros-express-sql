@@ -130,7 +130,7 @@ describe('app routes', () => {
       ];
 
       const data = await fakeRequest(app)
-        .get('/characters/hero')
+        .get('/categories/hero')
         .expect('Content-Type', /json/)
         .expect(200);
 
