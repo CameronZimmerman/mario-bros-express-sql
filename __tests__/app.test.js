@@ -33,17 +33,7 @@ describe('app routes', () => {
 
     test('returns animals', async() => {
 
-      const expectation = [
-        {
-          id: 1,
-          owner_id: 1,
-          name: 'mario',
-          good_guy: true,
-          image_url: 'https://www.mariowiki.com/images/c/cf/SMB_Super_Mario_Sprite.png',
-          age: 45,
-          category: 'hero',
-          quote: 'It\'s a-me, Mario!'
-        },
+      const expectation = 
         {
           id: 2,
           owner_id: 1,
@@ -53,51 +43,10 @@ describe('app routes', () => {
           age: 43,
           category: 'hero',
           quote: 'Luigi time!'
-        },
-        {
-          id: 3,
-          owner_id: 1,
-          name: 'princess toadstool',
-          good_guy: true,
-          image_url: 'https://www.mariowiki.com/images/c/c0/SMB_Princess_Toadstool_Sprite.png',
-          age: 40,
-          category: 'damsel',
-          quote: 'Oh, no... oh.'
-        },
-        {
-          id: 4,
-          owner_id: 1,
-          name: 'goomba',
-          good_guy: false,
-          image_url: 'https://www.mariowiki.com/images/4/4e/SMB_Goomba_Sprite.gif',
-          age: 0,
-          category: 'enemy',
-          quote: 'N/A'
-        },
-        {
-          id: 5,
-          owner_id: 1,
-          name: 'bullet bill',
-          good_guy: false,
-          image_url: 'https://www.mariowiki.com/images/e/ec/Bullet_Bill_Super_Mario_Bros.png',
-          age: 0,
-          category: 'enemy',
-          quote: 'N/A'
-        },
-        {
-          id: 6,
-          owner_id: 1,
-          name: 'bowser',
-          good_guy: false,
-          image_url: 'https://www.mariowiki.com/images/3/31/SMB_Bowser_Walking_Sprite.gif',
-          age: 50,
-          category: 'boss',
-          quote: 'Mario! Prepare yourself for the great beyond!'
-        }
-      ];
+        };
 
       const data = await fakeRequest(app)
-        .get('/characters')
+        .get('/characters/luigi')
         .expect('Content-Type', /json/)
         .expect(200);
 
