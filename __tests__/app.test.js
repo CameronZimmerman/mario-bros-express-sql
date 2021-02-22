@@ -158,5 +158,27 @@ describe('app routes', () => {
 
       expect(data.body).toEqual(expectation);
     });
+
+    test('returns characters', async() => {
+
+      const expectation =
+        {
+          id:7,
+          owner_id:1,
+          name: 'waluigi',
+          good_guy: false,
+          image_url: 'https://www.mariowiki.com/images/thumb/3/3f/Mario_Party_-_Island_Tour_Waluigi_Artwork.png/170px-Mario_Party_-_Island_Tour_Waluigi_Artwork.png',
+          age: 45,
+          category: 'villian',
+          quote: 'I"M NUMBER ONE! Heh, hehehehe! Look, I\'ma dance, I'ma Sing, I\'ma so Happy! HA, hahahahaha!...Heh? Grrrrrrrrrrrrr!'
+        };
+
+      const data = await fakeRequest(app)
+        .get('/characters')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      expect(data.body.find(character => character.name === expectation.name)).toEqual(expectation);
+    });
   });
 });
