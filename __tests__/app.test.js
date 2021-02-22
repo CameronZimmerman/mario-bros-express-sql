@@ -170,7 +170,7 @@ describe('app routes', () => {
           image_url: 'https://www.mariowiki.com/images/thumb/3/3f/Mario_Party_-_Island_Tour_Waluigi_Artwork.png/170px-Mario_Party_-_Island_Tour_Waluigi_Artwork.png',
           age: 45,
           category: 'villian',
-          quote: 'I"M NUMBER ONE! Heh, hehehehe! Look, I\'ma dance, I'ma Sing, I\'ma so Happy! HA, hahahahaha!...Heh? Grrrrrrrrrrrrr!'
+          quote: 'I"M NUMBER ONE! Heh, hehehehe! Look, I\'ma dance, I\'ma Sing, I\'ma so Happy! HA, hahahahaha!...Heh? Grrrrrrrrrrrrr!'
         };
 
       const data = await fakeRequest(app)
