@@ -159,7 +159,7 @@ describe('app routes', () => {
       expect(data.body).toEqual(expectation);
     });
 
-    test('returns characters', async() => {
+    test('creates new characters', async() => {
       const newChar = {
         name: 'waluigi',
         good_guy: false,
@@ -188,6 +188,27 @@ describe('app routes', () => {
         .expect(200);
 
       expect(data.body.find(character => character.name === expectation.name)).toEqual(expectation);
+    });
+
+    test('deletes specific character by name', async() => {
+
+      const objToDelete = 
+        {
+          name: 'luigi',
+          good_guy: true,
+          image_url: 'https://www.mariowiki.com/images/b/b7/SMB_Super_Luigi_Sprite.png',
+          age: 43,
+          category: 'hero',
+          quote: 'Luigi time!'
+        };
+      const expected = undefined;
+
+      const data = await fakeRequest(app)
+        .delete('/characters/luigi')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      expect(data.body.find(character => character.name === objToDelete.name)).toEqual(expected);
     });
   });
 });
