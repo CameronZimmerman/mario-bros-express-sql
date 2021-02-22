@@ -215,5 +215,35 @@ describe('app routes', () => {
 
       expect(data.body).toEqual(expectation);
     });
+
+    test('updates specific character by name', async() => {
+
+      const updatedObj = 
+        {
+          name: 'luigi',
+          good_guy: true,
+          image_url: 'https://www.mariowiki.com/images/b/b7/SMB_Super_Luigi_Sprite.png',
+          age: 50,
+          category: 'hero',
+          quote: 'Luigi time!'
+        };
+      const expectation = {
+        ...updatedObj,
+        id:2, 
+        owner_id:1
+      };
+
+      await fakeRequest(app)
+        .put('/characters/luigi')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      const data = await fakeRequest(app)
+        .get('/characters/luigi')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      expect(data.body).toEqual(expectation);
+    });
   });
 });
