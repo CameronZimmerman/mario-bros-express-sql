@@ -201,14 +201,19 @@ describe('app routes', () => {
           category: 'hero',
           quote: 'Luigi time!'
         };
-      const expected = undefined;
+      const expectation = '';
 
-      const data = await fakeRequest(app)
+      await fakeRequest(app)
         .delete('/characters/luigi')
         .expect('Content-Type', /json/)
         .expect(200);
 
-      expect(data.body.find(character => character.name === objToDelete.name)).toEqual(expected);
+      const data = await fakeRequest(app)
+        .get('/characters/luigi')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      expect(data.body).toEqual(expectation);
     });
   });
 });
