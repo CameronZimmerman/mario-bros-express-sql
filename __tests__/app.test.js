@@ -192,15 +192,6 @@ describe('app routes', () => {
 
     test('deletes specific character by name', async() => {
 
-      const objToDelete = 
-        {
-          name: 'luigi',
-          good_guy: true,
-          image_url: 'https://www.mariowiki.com/images/b/b7/SMB_Super_Luigi_Sprite.png',
-          age: 43,
-          category: 'hero',
-          quote: 'Luigi time!'
-        };
       const expectation = '';
 
       await fakeRequest(app)
@@ -220,26 +211,27 @@ describe('app routes', () => {
 
       const updatedObj = 
         {
-          name: 'luigi',
+          name: 'mario',
           good_guy: true,
           image_url: 'https://www.mariowiki.com/images/b/b7/SMB_Super_Luigi_Sprite.png',
           age: 50,
           category: 'hero',
-          quote: 'Luigi time!'
+          quote: 'new mario quote!'
         };
       const expectation = {
         ...updatedObj,
-        id:2, 
+        id:1, 
         owner_id:1
       };
 
       await fakeRequest(app)
-        .put('/characters/luigi')
+        .put('/characters/mario')
+        .send(updatedObj)
         .expect('Content-Type', /json/)
         .expect(200);
 
       const data = await fakeRequest(app)
-        .get('/characters/luigi')
+        .get('/characters/mario')
         .expect('Content-Type', /json/)
         .expect(200);
 
