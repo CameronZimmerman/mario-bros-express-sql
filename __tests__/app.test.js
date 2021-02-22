@@ -172,7 +172,12 @@ describe('app routes', () => {
           category: 'villian',
           quote: 'I"M NUMBER ONE! Heh, hehehehe! Look, I\'ma dance, I\'ma Sing, I\'ma so Happy! HA, hahahahaha!...Heh? Grrrrrrrrrrrrr!'
         };
-
+      
+      await fakeRequest(app)
+        .post('/characters')
+        .expect('Content-Type', /json/)
+        .expect(200);
+        
       const data = await fakeRequest(app)
         .get('/characters')
         .expect('Content-Type', /json/)
