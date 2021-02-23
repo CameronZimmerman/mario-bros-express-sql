@@ -1,6 +1,5 @@
 module.exports = [
   {
-
     category_name: 'hero',
   },
   {

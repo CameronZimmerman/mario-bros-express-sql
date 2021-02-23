@@ -4,6 +4,7 @@ module.exports = [
     good_guy: true,
     image_url: 'https://www.mariowiki.com/images/c/cf/SMB_Super_Mario_Sprite.png',
     age: 45,
+    category_id: 1,
     category: 'hero',
     quote: 'It\'s a-me, Mario!'
   },
@@ -12,6 +13,7 @@ module.exports = [
     good_guy: true,
     image_url: 'https://www.mariowiki.com/images/b/b7/SMB_Super_Luigi_Sprite.png',
     age: 43,
+    category_id: 1,
     category: 'hero',
     quote: 'Luigi time!'
   },
@@ -20,6 +22,7 @@ module.exports = [
     good_guy: true,
     image_url: 'https://www.mariowiki.com/images/c/c0/SMB_Princess_Toadstool_Sprite.png',
     age: 40,
+    category_id: 2,
     category: 'damsel',
     quote: 'Oh, no... oh.'
   },
@@ -28,6 +31,7 @@ module.exports = [
     good_guy: false,
     image_url: 'https://www.mariowiki.com/images/4/4e/SMB_Goomba_Sprite.gif',
     age: 0,
+    category_id: 3,
     category: 'enemy',
     quote: 'N/A'
   },
@@ -36,6 +40,7 @@ module.exports = [
     good_guy: false,
     image_url: 'https://www.mariowiki.com/images/e/ec/Bullet_Bill_Super_Mario_Bros.png',
     age: 0,
+    category_id: 3,
     category: 'enemy',
     quote: 'N/A'
   },
@@ -44,6 +49,7 @@ module.exports = [
     good_guy: false,
     image_url: 'https://www.mariowiki.com/images/3/31/SMB_Bowser_Walking_Sprite.gif',
     age: 50,
+    category_id: 4,
     category: 'boss',
     quote: 'Mario! Prepare yourself for the great beyond!'
   }
