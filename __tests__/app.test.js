@@ -190,12 +190,13 @@ describe('app routes', () => {
           good_guy: true,
           image_url: 'https://www.mariowiki.com/images/b/b7/SMB_Super_Luigi_Sprite.png',
           age: 50,
-          category: 'hero',
+          category_name: 'hero',
+          category_id: 1,
           quote: 'new mario quote!'
         };
       const expectation = {
         ...updatedObj,
-        id:1, 
+        char_id:1, 
         owner_id:1
       };
 
