@@ -19,7 +19,7 @@ async function run() {
                 );     
                 CREATE TABLE categories (
                   id SERIAL PRIMARY KEY,
-                  character_name VARCHAR(512) NOT NULL
+                  category_name VARCHAR(512) NOT NULL
               );        
                 CREATE TABLE characters (
                     id SERIAL PRIMARY KEY NOT NULL,
@@ -27,7 +27,7 @@ async function run() {
                     good_guy BOOLEAN NOT NULL, 
                     image_url VARCHAR(512) NOT NULL,
                     age INTEGER NOT NULL,
-                    category_id INTEGER NOT NULL REFERENCES categories(id),
+                    category_id VARCHAR(512) NOT NULL,
                     quote VARCHAR(512) NOT NULL,
                     owner_id INTEGER NOT NULL REFERENCES users(id)
             );

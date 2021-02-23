@@ -41,7 +41,7 @@ describe('app routes', () => {
           good_guy: true,
           image_url: 'https://www.mariowiki.com/images/c/cf/SMB_Super_Mario_Sprite.png',
           age: 45,
-          category: 'hero',
+          category_id: 1,
           quote: 'It\'s a-me, Mario!'
         },
         {
@@ -51,7 +51,7 @@ describe('app routes', () => {
           good_guy: true,
           image_url: 'https://www.mariowiki.com/images/b/b7/SMB_Super_Luigi_Sprite.png',
           age: 43,
-          category: 'hero',
+          category_id: 1,
           quote: 'Luigi time!'
         },
         {
@@ -61,7 +61,7 @@ describe('app routes', () => {
           good_guy: true,
           image_url: 'https://www.mariowiki.com/images/c/c0/SMB_Princess_Toadstool_Sprite.png',
           age: 40,
-          category: 'damsel',
+          category_id: 2,
           quote: 'Oh, no... oh.'
         },
         {
@@ -71,7 +71,7 @@ describe('app routes', () => {
           good_guy: false,
           image_url: 'https://www.mariowiki.com/images/4/4e/SMB_Goomba_Sprite.gif',
           age: 0,
-          category: 'enemy',
+          category_id: 3,
           quote: 'N/A'
         },
         {
@@ -81,7 +81,7 @@ describe('app routes', () => {
           good_guy: false,
           image_url: 'https://www.mariowiki.com/images/e/ec/Bullet_Bill_Super_Mario_Bros.png',
           age: 0,
-          category: 'enemy',
+          category_id: 3,
           quote: 'N/A'
         },
         {
@@ -91,7 +91,7 @@ describe('app routes', () => {
           good_guy: false,
           image_url: 'https://www.mariowiki.com/images/3/31/SMB_Bowser_Walking_Sprite.gif',
           age: 50,
-          category: 'boss',
+          category_id: 4,
           quote: 'Mario! Prepare yourself for the great beyond!'
         }
       ];
