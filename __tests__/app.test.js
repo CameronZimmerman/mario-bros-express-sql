@@ -110,6 +110,35 @@ describe('app routes', () => {
       expect(data.body).toEqual(expectation);
     });
 
+    test('returns categories', async() => {
+
+      const expectation = [
+        {
+          id: 1,
+          category_name: 'hero',
+        },
+        {
+          id: 2,
+          category_name: 'damsel',
+        },
+        {
+          id: 3,
+          category_name: 'enemy',
+        },
+        {
+          id: 4,
+          category_name: 'boss',
+        }
+      ];
+
+      const data = await fakeRequest(app)
+        .get('/categories')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      expect(data.body).toEqual(expectation);
+    });
+
     test('returns specific character by name', async() => {
 
       const expectation = 
