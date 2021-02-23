@@ -35,62 +35,68 @@ describe('app routes', () => {
 
       const expectation = [
         {
-          id:1,
+          char_id:1,
           owner_id:1,
           name: 'mario',
           good_guy: true,
           image_url: 'https://www.mariowiki.com/images/c/cf/SMB_Super_Mario_Sprite.png',
           age: 45,
+          category_name: 'hero',
           category_id: 1,
           quote: 'It\'s a-me, Mario!'
         },
         {
-          id: 2,
+          char_id: 2,
           owner_id: 1,
           name: 'luigi',
           good_guy: true,
           image_url: 'https://www.mariowiki.com/images/b/b7/SMB_Super_Luigi_Sprite.png',
           age: 43,
+          category_name: 'hero',
           category_id: 1,
           quote: 'Luigi time!'
         },
         {
-          id: 3,
+          char_id: 3,
           owner_id: 1,
           name: 'princess toadstool',
           good_guy: true,
           image_url: 'https://www.mariowiki.com/images/c/c0/SMB_Princess_Toadstool_Sprite.png',
           age: 40,
+          category_name: 'damsel',
           category_id: 2,
           quote: 'Oh, no... oh.'
         },
         {
-          id: 4,
+          char_id: 4,
           owner_id: 1,
           name: 'goomba',
           good_guy: false,
           image_url: 'https://www.mariowiki.com/images/4/4e/SMB_Goomba_Sprite.gif',
           age: 0,
+          category_name: 'enemy',
           category_id: 3,
           quote: 'N/A'
         },
         {
-          id: 5,
+          char_id: 5,
           owner_id: 1,
           name: 'bullet bill',
           good_guy: false,
           image_url: 'https://www.mariowiki.com/images/e/ec/Bullet_Bill_Super_Mario_Bros.png',
           age: 0,
+          category_name: 'enemy',
           category_id: 3,
           quote: 'N/A'
         },
         {
-          id: 6,
+          char_id: 6,
           owner_id: 1,
           name: 'bowser',
           good_guy: false,
           image_url: 'https://www.mariowiki.com/images/3/31/SMB_Bowser_Walking_Sprite.gif',
           age: 50,
+          category_name: 'boss',
           category_id: 4,
           quote: 'Mario! Prepare yourself for the great beyond!'
         }
@@ -104,50 +110,18 @@ describe('app routes', () => {
       expect(data.body).toEqual(expectation);
     });
 
-    test('returns characters by category', async() => {
-
-      const expectation = [
-        {
-          id:1,
-          owner_id:1,
-          name: 'mario',
-          good_guy: true,
-          image_url: 'https://www.mariowiki.com/images/c/cf/SMB_Super_Mario_Sprite.png',
-          age: 45,
-          category: 'hero',
-          quote: 'It\'s a-me, Mario!'
-        },
-        {
-          id: 2,
-          owner_id: 1,
-          name: 'luigi',
-          good_guy: true,
-          image_url: 'https://www.mariowiki.com/images/b/b7/SMB_Super_Luigi_Sprite.png',
-          age: 43,
-          category: 'hero',
-          quote: 'Luigi time!'
-        },
-      ];
-
-      const data = await fakeRequest(app)
-        .get('/categories/hero')
-        .expect('Content-Type', /json/)
-        .expect(200);
-
-      expect(data.body).toEqual(expectation);
-    });
-
     test('returns specific character by name', async() => {
 
       const expectation = 
         {
-          id: 2,
+          char_id: 2,
           owner_id: 1,
           name: 'luigi',
           good_guy: true,
           image_url: 'https://www.mariowiki.com/images/b/b7/SMB_Super_Luigi_Sprite.png',
           age: 43,
-          category: 'hero',
+          category_name: 'hero',
+          category_id: 1,
           quote: 'Luigi time!'
         };
 
