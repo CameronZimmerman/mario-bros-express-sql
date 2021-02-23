@@ -139,13 +139,14 @@ describe('app routes', () => {
         good_guy: false,
         image_url: 'https://www.mariowiki.com/images/thumb/3/3f/Mario_Party_-_Island_Tour_Waluigi_Artwork.png/170px-Mario_Party_-_Island_Tour_Waluigi_Artwork.png',
         age: 45,
-        category: 'villian',
+        category_name: 'enemy',
+        category_id: 3,
         quote: 'I"M NUMBER ONE! Heh, hehehehe! Look, I\'ma dance, I\'ma Sing, I\'ma so Happy! HA, hahahahaha!...Heh? Grrrrrrrrrrrrr!'
       };
       const expectation =
         {
           ...newChar,
-          id:7,
+          char_id:7,
           owner_id:1,
           
         };
