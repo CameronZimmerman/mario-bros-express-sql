@@ -35,70 +35,70 @@ describe('app routes', () => {
 
       const expectation = [
         {
-          char_id:1,
-          owner_id:1,
-          name: 'mario',
-          good_guy: true,
-          image_url: 'https://www.mariowiki.com/images/c/cf/SMB_Super_Mario_Sprite.png',
-          age: 45,
           category_name: 'hero',
-          category_id: 1,
-          quote: 'It\'s a-me, Mario!'
-        },
-        {
-          char_id: 2,
           owner_id: 1,
           name: 'luigi',
           good_guy: true,
           image_url: 'https://www.mariowiki.com/images/b/b7/SMB_Super_Luigi_Sprite.png',
           age: 43,
-          category_name: 'hero',
           category_id: 1,
-          quote: 'Luigi time!'
+          quote: 'Luigi time!',
+          char_id: 2
         },
         {
-          char_id: 3,
+          category_name: 'hero',
+          owner_id: 1,
+          name: 'mario',
+          good_guy: true,
+          image_url: 'https://www.mariowiki.com/images/c/cf/SMB_Super_Mario_Sprite.png',
+          age: 45,
+          category_id: 1,
+          quote: 'It\'s a-me, Mario!',
+          char_id: 1
+        },
+        {
+          category_name: 'damsel',
           owner_id: 1,
           name: 'princess toadstool',
           good_guy: true,
           image_url: 'https://www.mariowiki.com/images/c/c0/SMB_Princess_Toadstool_Sprite.png',
           age: 40,
-          category_name: 'damsel',
           category_id: 2,
-          quote: 'Oh, no... oh.'
+          quote: 'Oh, no... oh.',
+          char_id: 3
         },
         {
-          char_id: 4,
-          owner_id: 1,
-          name: 'goomba',
-          good_guy: false,
-          image_url: 'https://www.mariowiki.com/images/4/4e/SMB_Goomba_Sprite.gif',
-          age: 0,
           category_name: 'enemy',
-          category_id: 3,
-          quote: 'N/A'
-        },
-        {
-          char_id: 5,
           owner_id: 1,
           name: 'bullet bill',
           good_guy: false,
           image_url: 'https://www.mariowiki.com/images/e/ec/Bullet_Bill_Super_Mario_Bros.png',
           age: 0,
-          category_name: 'enemy',
           category_id: 3,
-          quote: 'N/A'
+          quote: 'N/A',
+          char_id: 5
         },
         {
-          char_id: 6,
+          category_name: 'enemy',
+          owner_id: 1,
+          name: 'goomba',
+          good_guy: false,
+          image_url: 'https://www.mariowiki.com/images/4/4e/SMB_Goomba_Sprite.gif',
+          age: 0,
+          category_id: 3,
+          quote: 'N/A',
+          char_id: 4
+        },
+        {
+          category_name: 'boss',
           owner_id: 1,
           name: 'bowser',
           good_guy: false,
           image_url: 'https://www.mariowiki.com/images/3/31/SMB_Bowser_Walking_Sprite.gif',
           age: 50,
-          category_name: 'boss',
           category_id: 4,
-          quote: 'Mario! Prepare yourself for the great beyond!'
+          quote: 'Mario! Prepare yourself for the great beyond!',
+          char_id: 6
         }
       ];
 
