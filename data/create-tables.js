@@ -27,7 +27,7 @@ async function run() {
                     good_guy BOOLEAN NOT NULL, 
                     image_url VARCHAR(512) NOT NULL,
                     age INTEGER NOT NULL,
-                    category VARCHAR(512) NOT NULL,
+                    category_id INTEGER NOT NULL REFERENCES categories(id),
                     quote VARCHAR(512) NOT NULL,
                     owner_id INTEGER NOT NULL REFERENCES users(id)
             );
